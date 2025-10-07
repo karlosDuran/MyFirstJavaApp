@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
     @Override
@@ -20,18 +20,11 @@ public class MainActivity extends AppCompatActivity {
         myButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //  Crea una instancia de Toast (un mensaje emergente).
-                //    Se usa el contexto de la aplicación para que sepa dónde mostrarse.
-                Toast toast = new Toast(getApplicationContext());
+                // Create an Intent to navigate from the current activity to RelativeActivity.
+                Intent intent = new Intent(MainActivity.this, ActivityLayout.class);
 
-                // Establece el texto que se mostrará en el mensaje.
-                toast.setText("Qué rollito");
-
-                // Define la duración del mensaje (en este caso, corta).
-                toast.setDuration(Toast.LENGTH_SHORT);
-
-                //  Muestra el mensaje Toast en la pantalla.
-                toast.show();
+                // Start the new activity.
+                startActivity(intent);
             }
         });
     }
