@@ -1,24 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/unlock_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical">
+    android:background="@android:color/white">
 
-    <TextView
-        android:id="@+id/textViewHelloWorld"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:text="Hola mundo"
-        android:textSize="24sp" />
+    <ImageView
+        android:id="@+id/unlock_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/final_curso" />
 
-    <Button
-        android:id="@+id/myButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/teal_200"
-        android:layout_marginTop="25dp"
-        android:text="Toca aquí" />
-
-
-</LinearLayout>
+</FrameLayout>
